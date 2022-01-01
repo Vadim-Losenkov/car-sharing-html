@@ -1,0 +1,492 @@
+/* 
+Автор вёрстки: Андрей Овчаров;
+Дата вёрстки: 17.04.2021; 
+E-mail: datoshcode@gmail.com.
+
+CSS-код успешно прошел проверку данных на валидность с помощью: https://validator.w3.org. Ошибок не обнаружено. */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Общие стили /begin-code */
+body {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #2c2b2b;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* Общие стили ../end-code */
+/* ---------------------------------------------------------------------------- */
+
+/* Шапка сайта /begin-code */
+.header {
+  background-image: url(../images/header-bg.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  min-height: 700px;
+  color: #ffffff;
+}
+
+/* Область шапки сайта с голотипом и телефоном*/
+
+/* Логотип */
+.header__top {
+  padding: 47px 0 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Номер телефона */
+.phone {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 53px;
+}
+
+.header__content {
+  padding-top: 60px;
+  position: relative;
+}
+
+/* Заголовок h1 */
+.header__title {
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 107px;
+  text-transform: uppercase;
+}
+
+/* Заголовок h2 */
+.header__subtitle {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 53px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.header__text {
+  margin-bottom: 30px;
+  max-width: 800px;
+}
+
+/* Кнопка Консультация эксперта */
+.button {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 14px 54px 15px;
+  background-color: #5a0d67;
+  transition: all 0.5s; /* Замедление на 0.5 сек */
+}
+
+/* Взаимодействие с кнопкой при наведении*/
+.button:hover {
+  color: #5a0d67;
+  background-color: #ffffff;
+}
+
+/* Социальные сети */
+.header__social {
+  padding: 70px 0 20px 70px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+/* Ссылки на социальные сети */
+.social-link {
+  margin: 0 5px;
+  transition: all 0.5s; /* Время эффекта */
+}
+
+/* Эффект увеличения масштаба иконок социальных сетей */
+.social-link:hover {
+  transform: scale(1.2);
+}
+
+/* Изображение автомобиля ford mustang */
+.header__images {
+  position: absolute;
+  right: 0;
+  top: 285px;
+}
+/* Шапка сайта ../end-code */
+/* ---------------------------------------------------------------------------- */
+
+/* Наши услуги  /begin-code */
+.services {
+  padding-top: 300px;
+}
+
+/* Заголовок h2 "Наши услуги"*/
+.title {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 53px;
+  text-transform: uppercase;
+  color: #21062a;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Декоративная линия в заголовке */
+.title::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  border-top: 3px solid #21062a;
+  top: 20px;
+  margin-left: 20px;
+}
+
+/* Наши услуги */
+.services__inner {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+/* Описание наших услуг */
+.services__content {
+  width: 505px;
+  margin-right: 96px;
+}
+
+/* Заголовки к описаниям услуг */
+.services__content-title {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  color: #5a0d67;
+  margin-bottom: 12px;
+}
+
+/* Текстовая область услуг */
+.services__content-textbox {
+  margin-bottom: 57px;
+}
+
+/* Текст наших услуг */
+.services__content-text {
+  margin-bottom: 12px;
+}
+
+/* Кнопка "Консультация эксперта" в наших услугах */
+.button--decor {
+  margin-top: -7px;
+  color: #ffffff;
+  position: relative;
+}
+
+.button--decor:hover {
+  border: 2px solid #5a0d67;
+}
+
+/* Надпись ЖМИ возле кнопки */
+.button--decor::after {
+  content: "ЖМИ";
+  color: #c4c4c4;
+  position: absolute;
+  margin-left: 130px;
+}
+
+/* Декоративная линия перед ЖМИ */
+.button--decor::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  border-top: 2px solid #c4c4c4;
+  top: 23px;
+  left: 235px;
+}
+
+/* Список наших услуг с нумерацией от 01 до 06 */
+.services__list {
+  list-style: none;
+  counter-reset: number-list;
+}
+
+/* Если элементов в списке будет 10 и более и ненужен перед 10 ноль (010), то применяем следующий код: 
+ .class:nth-child(n + 10)::before {
+	content: counter(number-list);
+}
+*/
+
+/* Ячейка списка в спокойном состоянии */
+.services__item {
+  counter-increment: number-list;
+  border: 2px solid #c4c4c4;
+  margin-bottom: 12px;
+  width: 450px;
+  padding: 10px 15px 10px 113px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+/* Ячейка списка при взаимодействии.
+Изменяется ширина и цвет рамки */
+.services__item:hover {
+  border: 2px solid #5a0d67;
+  width: 500px;
+}
+
+/* Изменяется цвет заголовка */
+.services__item:hover .services__item-title {
+  color: #5a0d67;
+}
+
+.services__item::before {
+  content: "0" counter(number-list);
+  position: absolute;
+  left: 20px;
+  font-size: 36px;
+  line-height: 53px;
+  font-weight: 400;
+  color: #c4c4c4;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+}
+
+/* Изменяется цвет номера ячейки */
+.services__item:hover::before {
+  color: #5a0d67;
+}
+
+/* Заголовок ячейки списка услуг */
+.services__item-title {
+  font-size: 24px;
+  font-weight: 300;
+}
+/* ---- Наши услуги ../end-code */
+/* ---------------------------------------------------------------------------- */
+
+/*  Почему мы? /begin-code */
+.benefits {
+  margin-bottom: 100px;
+}
+
+.benefits__inner {
+  display: flex;
+}
+
+/* Автомобиль в разделе */
+.benefits__images {
+  margin-right: 95px;
+}
+
+.benefits__content {
+  width: 100%;
+  color: #ffffff;
+}
+
+/* Заголовок раздела */
+.benefits__title {
+  margin-left: 185px;
+}
+
+/* Список с преимуществами */
+.benefits__list {
+  list-style-type: none;
+  background-color: #21062a;
+  padding: 25px 0 25px 185px;
+}
+
+.benefits__item {
+  width: 320px;
+  margin-bottom: 20px;
+}
+
+/* Числа */
+.benefits__item-num {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 53px;
+}
+
+/* Выделенная фраза */
+.benefits__item-title {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 36px;
+}
+
+/* Текст c описанием преимуществ */
+.benefits__item-text {
+  color: #c4c4c4;
+}
+/*  Почему мы? ../end-code */
+/* ---------------------------------------------------------------------------- */
+
+/* Пригнанные нами авто (слайдер) /begin-code */
+.slider {
+  margin-bottom: 100px;
+}
+
+.slider__inner {
+  margin: 0 -7px;
+}
+
+.slider__item-box {
+  border: 1px solid #c4c4c4;
+  padding: 6px 6px 16px 6px;
+  margin: 0 7px;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+/* Активный слайд изменяет цвет при наведении */
+.slider__item-box:hover {
+  background-color: #5a0d67;
+  border-color: #5a0d67;
+  color: #ffffff;
+}
+
+/* Изображение слайдера */
+.slider__item-img {
+  max-width: 100%;
+  margin-bottom: 23px;
+}
+
+/* Заголовок слайда */
+.slider__item-title {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+/* Дотсы слайдера (метки под слайдером) */
+.slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  list-style: none;
+}
+
+.slider .slick-dots button {
+  font-size: 0;
+  border: none;
+  padding: 0;
+  margin: 0 10px;
+  background-color: #c4c4c4;
+  width: 50px;
+  height: 1px;
+}
+
+/* Дотсы слайдера в активном состоянии */
+.slider .slick-active button {
+  background-color: #5a0d67;
+  height: 3px;
+  outline: none;
+}
+/*  Пригнанные нами авто ../end-code */
+/* ---------------------------------------------------------------------------- */
+
+/*  Контакты и Оставить заявку /begin-code */
+/* Контакты */
+.contacts__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts__list {
+  list-style: none;
+}
+
+.contacts__item {
+  margin-bottom: 20px;
+}
+
+.contacts__item-title {
+  color: #5a0d67;
+}
+
+/* Оставить заявку */
+.contacts__form {
+  background-color: #21062a;
+  padding: 50px 75px 57px;
+  text-align: center;
+}
+
+.contacts__title {
+  color: #ffffff;
+  margin-bottom: 16px;
+  margin-left: 53px;
+  text-align: left;
+}
+
+.contacts__title::after {
+  border-color: #ffffff;
+}
+
+/* Отдельный отступ вниз для заголовка "Контакты" перед footer */
+.contacts__info-title {
+  margin-top: 50px;
+}
+
+.contacts__input {
+  background-color: transparent;
+  width: 450px;
+  height: 75px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  margin-bottom: 12px;
+  display: block;
+  font-size: 23px;
+  /* Отступы строки ввода текста в поле */
+  padding: 0 10px;
+}
+
+.contacts__input::placeholder {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+  color: #c4c4c4;
+}
+
+.contacts__btn {
+  border: none;
+  color: #ffffff;
+  margin-top: 78px;
+  cursor: pointer;
+}
+
+/*   Контакты и Оставить заявку ../end-code */
+/* ---------------------------------------------------------------------------- */
+
+/* Footer /begin-code */
+.footer {
+  background-color: #21062a;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  height: 100px;
+}
+/* Footer ../end-code */

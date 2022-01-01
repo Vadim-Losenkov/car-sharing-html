@@ -1,0 +1,261 @@
+/* 
+Адаптив для сайта "Авто из США";
+Автор вёрстки: Андрей Овчаров;
+Дата вёрстки: 17.04.2021; 
+E-mail: datoshcode@gmail.com. 
+*/
+
+/* --------- max-width: 1140px ------------ */
+@media (max-width: 1140px) {
+  .services__item:hover {
+    width: 450px;
+  }
+}
+
+/* --------- max-width: 1024px ------------ */
+@media (max-width: 1024px) {
+  .header__images {
+    width: 80%;
+  }
+
+  .services {
+    padding-top: 250px;
+  }
+
+  .services__inner {
+    flex-wrap: wrap;
+  }
+
+  /* Поднять список услуг под заголовок */
+  .services__list {
+    order: -1;
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .services__item {
+    width: 100%;
+  }
+
+  .services__item:hover {
+    width: 100%;
+  }
+
+  .services__content {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .benefits__images {
+    display: none;
+  }
+}
+
+/* --------- max-width: 900px ------------ */
+@media (max-width: 900px) {
+  .phone,
+  .header__subtitle {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .header__title {
+    font-size: 54px;
+    line-height: 74px;
+  }
+
+  .header__subtitle {
+    margin-bottom: 20px;
+  }
+
+  .header__social {
+    padding: 30px 0 20px 53px;
+  }
+
+  .contacts__inner {
+    display: block;
+    text-align: center;
+  }
+
+  .contacts__list {
+    margin-bottom: 30px;
+  }
+
+  .contacts__input {
+    width: 100%;
+  }
+
+  .contacts__btn {
+    margin-top: 20px;
+  }
+
+  .contacts__title {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+/* --------- max-width: 768px ------------ */
+@media (max-width: 768px) {
+  .benefits__inner {
+    text-align: center;
+  }
+
+  .benefits__list {
+    padding: 25px 15px;
+  }
+
+  .benefits__item {
+    width: 100%;
+  }
+
+  .benefits__title {
+    margin-left: 0;
+  }
+}
+
+/* --------- max-width: 650px ------------ */
+@media (max-width: 650px) {
+  .footer__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .footer__social {
+    width: 100%;
+    justify-content: center;
+    margin: 25px 0;
+  }
+
+  .footer__copy {
+    margin-bottom: 30px;
+  }
+}
+
+/* --------- max-width: 600px ------------ */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .services__content {
+    text-align: center;
+  }
+
+  .services__item::before {
+    top: 5px;
+  }
+
+  .header__content {
+    padding-top: 0px;
+    text-align: center;
+  }
+
+  .header__social {
+    padding: 30px 0 20px 0;
+  }
+
+  .social {
+    justify-content: center;
+  }
+
+  .services {
+    padding-top: 150px;
+  }
+
+  .title {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Убираем линию в заголовке */
+  .title::after {
+    display: none;
+  }
+
+  .benefits__item-num {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .slider__item-img {
+    width: 100%;
+  }
+}
+
+/* --------- max-width: 520px ------------ */
+@media (max-width: 520px) {
+  .header__top {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .header__title {
+    margin-bottom: 20px;
+  }
+
+  .header__images {
+    position: static;
+    width: 100%;
+  }
+
+  .services {
+    padding-top: 50px;
+  }
+
+  .services__item {
+    padding-left: 60px;
+  }
+  .services__item::before {
+    left: 11px;
+  }
+
+  .button--decor::before {
+    right: -50px;
+  }
+
+  .button--decor::after {
+    margin-left: 110px;
+  }
+
+  .services__inner,
+  .benefits,
+  .slider {
+    margin-bottom: 50px;
+  }
+
+  /* Ширина дотсов */
+  .slider .slick-dots button {
+    width: 15px;
+  }
+
+  .contacts__form {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .button--decor::before,
+  .button--decor::after {
+    display: none;
+  }
+}
+
+/* --------- max-width: 340px ------------ */
+@media (max-width: 340px) {
+  .header__title {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
